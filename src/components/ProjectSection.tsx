@@ -72,7 +72,6 @@ const ProjectSection: FunctionComponent<ProjectSectionType> = ({
           propWidth="74px"
           tagOrButton="HTML/CSS"
           propMinWidth1="58px"
-          propWidth1="71px"
           tagOrButton1="JavaScript"
           propDisplay="inline-block"
           propMinWidth2="55px"
@@ -84,5 +83,4 @@ const ProjectSection: FunctionComponent<ProjectSectionType> = ({
     </motion.section>
   );
 };
-
 export default ProjectSection;
