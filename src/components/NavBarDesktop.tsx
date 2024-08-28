@@ -59,7 +59,7 @@ const NavBarDesktop: FunctionComponent<NavBarDesktopType> = ({
       <div className="flex flex-row items-center justify-center text-light-text-color">
         <div className="rounded-17xl bg-gray-900 overflow-hidden flex flex-row items-center justify-center py-[10px] px-[20px] gap-[10px]">
           <a
-            href="https://drive.google.com/file/d/1QqZ1abvxDgLHu8bL6eLBa9oRbq9mTKDE/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1if4TrLO2YOUQxaZ3PLtXCNWfT61EuFMQ/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="[text-decoration:none] relative tracking-[0.2px] leading-[24px] font-semibold text-[14px] text-white whitespace-nowrap"
