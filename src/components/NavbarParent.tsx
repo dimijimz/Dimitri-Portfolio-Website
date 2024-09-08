@@ -1,6 +1,6 @@
-import { Link as ScrollLink } from "react-scroll";
 import { FunctionComponent, useState } from "react";
-import NavBarDesktop from "./NavBarDesktop";
+import { Link as ScrollLink } from "react-scroll"; // Import ScrollLink
+import NavBarDesktop from "./NavBarDesktop"; // Keep the full desktop nav
 
 export type NavbarParentType = {
   className?: string;
@@ -16,7 +16,9 @@ const NavbarParent: FunctionComponent<NavbarParentType> = ({
   };
 
   return (
-    <header className={`self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-left text-lg text-gray-900 font-btn-text ${className}`}>
+    <header
+      className={`self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-left text-lg text-gray-900 font-btn-text ${className}`}
+    >
       <div className="w-full flex flex-row items-start justify-start max-w-full">
         <div className="flex items-center justify-between w-full py-4">
           {/* Logo */}
@@ -32,7 +34,7 @@ const NavbarParent: FunctionComponent<NavbarParentType> = ({
             </div>
           </div>
 
-          {/* Mobile Hamburger Menu */}
+          {/* Mobile Hamburger Menu (only visible on mobile/tablet) */}
           <button
             className="md:hidden flex items-center px-3 py-2 border rounded text-gray-700 border-gray-500 hover:text-gray-900 hover:border-gray-900"
             onClick={toggleMobileMenu}
@@ -58,7 +60,7 @@ const NavbarParent: FunctionComponent<NavbarParentType> = ({
             </svg>
           </button>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu (only visible when hamburger is clicked) */}
           {isMobileMenuOpen && (
             <div className="md:hidden absolute top-16 left-0 w-full bg-white z-50">
               <ul className="flex flex-col items-center gap-4 py-4">
@@ -69,7 +71,7 @@ const NavbarParent: FunctionComponent<NavbarParentType> = ({
                     duration={500}
                     offset={-70}
                     className="text-lg"
-                    onClick={toggleMobileMenu}
+                    onClick={toggleMobileMenu} // Close menu on link click
                   >
                     Projects
                   </ScrollLink>
@@ -112,7 +114,7 @@ const NavbarParent: FunctionComponent<NavbarParentType> = ({
             </div>
           )}
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu (hidden on mobile/tablet) */}
           <div className="hidden md:flex w-full">
             <NavBarDesktop />
           </div>
