@@ -1,6 +1,6 @@
 import { FunctionComponent, useState } from "react";
-import { Link as ScrollLink } from "react-scroll"; // Needed for smooth scrolling
-import NavBarDesktop from "./NavBarDesktop"; // Full desktop navigation
+import { Link as ScrollLink } from "react-scroll";
+import NavBarDesktop from "./NavBarDesktop";
 
 export type NavbarParentType = {
   className?: string;
@@ -9,10 +9,10 @@ export type NavbarParentType = {
 const NavbarParent: FunctionComponent<NavbarParentType> = ({
   className = "",
 }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Track if mobile menu is open
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen); // Toggle mobile menu
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -34,10 +34,10 @@ const NavbarParent: FunctionComponent<NavbarParentType> = ({
             </div>
           </div>
 
-          {/* Mobile Hamburger Menu (only visible on tablet/mobile) */}
+          {/* Mobile Hamburger Menu (only visible on tablet/mobile <1024px) */}
           <button
-            className="md:hidden flex items-center px-3 py-2 border rounded text-gray-700 border-gray-500 hover:text-gray-900 hover:border-gray-900"
-            onClick={toggleMobileMenu} // Toggle the mobile menu when clicked
+            className="lg:hidden flex items-center px-3 py-2 border rounded text-gray-700 border-gray-500 hover:text-gray-900 hover:border-gray-900"
+            onClick={toggleMobileMenu}
           >
             <svg
               className="fill-current h-6 w-6"
@@ -62,7 +62,7 @@ const NavbarParent: FunctionComponent<NavbarParentType> = ({
 
           {/* Mobile Menu (only visible when the hamburger menu is open) */}
           {isMobileMenuOpen && (
-            <div className="md:hidden absolute top-16 left-0 w-full bg-white z-50">
+            <div className="lg:hidden absolute top-16 left-0 w-full bg-white z-50">
               <ul className="flex flex-col items-center gap-4 py-4">
                 <li className="cursor-pointer">
                   <ScrollLink
@@ -71,7 +71,7 @@ const NavbarParent: FunctionComponent<NavbarParentType> = ({
                     duration={500}
                     offset={-70}
                     className="text-lg"
-                    onClick={toggleMobileMenu} // Close the menu when a link is clicked
+                    onClick={toggleMobileMenu}
                   >
                     Projects
                   </ScrollLink>
@@ -114,8 +114,8 @@ const NavbarParent: FunctionComponent<NavbarParentType> = ({
             </div>
           )}
 
-          {/* Desktop Menu (only visible on larger screens) */}
-          <div className="hidden md:flex w-full">
+          {/* Desktop Menu (visible on screens >= 1024px) */}
+          <div className="hidden lg:flex w-full">
             <NavBarDesktop />
           </div>
         </div>
