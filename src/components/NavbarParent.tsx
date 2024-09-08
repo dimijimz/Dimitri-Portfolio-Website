@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import NavBarDesktop from "./NavBarDesktop";
 
 export type NavbarParentType = {
@@ -8,12 +8,6 @@ export type NavbarParentType = {
 const NavbarParent: FunctionComponent<NavbarParentType> = ({
   className = "",
 }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
   return (
     <header className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-left text-lg text-gray-900 font-btn-text">
       <div className="w-full flex flex-row items-start justify-start max-w-full">
@@ -31,45 +25,8 @@ const NavbarParent: FunctionComponent<NavbarParentType> = ({
             </div>
           </div>
 
-          {/* Mobile Hamburger Menu (only visible on mobile screens <768px) */}
-          <button
-            className="md:hidden flex items-center px-3 py-2 border rounded text-gray-700 border-gray-500 hover:text-gray-900 hover:border-gray-900"
-            onClick={toggleMobileMenu}
-          >
-            <svg
-              className="fill-current h-6 w-6"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {isMobileMenuOpen ? (
-                <path
-                  fillRule="evenodd"
-                  d="M6 18L18 6M6 6l12 12"
-                  clipRule="evenodd"
-                />
-              ) : (
-                <path
-                  fillRule="evenodd"
-                  d="M4 5h16M4 12h16M4 19h16"
-                  clipRule="evenodd"
-                />
-              )}
-            </svg>
-          </button>
-
-          {/* Mobile Menu (only visible when hamburger is clicked) */}
-          {isMobileMenuOpen && (
-            <div className="md:hidden absolute top-16 left-0 w-full bg-white z-50">
-              <ul className="flex flex-col items-center gap-4 py-4">
-                <li className="cursor-pointer">Projects</li>
-                <li className="cursor-pointer">Info</li>
-                <li className="cursor-pointer">Contact</li>
-              </ul>
-            </div>
-          )}
-
-          {/* Desktop Navigation (visible on screens 768px and wider) */}
-          <div className="hidden md:flex w-full">
+          {/* Desktop Navigation (always visible) */}
+          <div className="flex w-full">
             <NavBarDesktop />
           </div>
         </div>
