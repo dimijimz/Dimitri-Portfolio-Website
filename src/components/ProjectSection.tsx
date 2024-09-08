@@ -65,9 +65,9 @@ const ProjectSection: FunctionComponent<ProjectSectionType> = ({
         />
         <Container1
           box="/box1.svg"
-          inventoryManager="Full Stack Web Developer - Freelance"
+          inventoryManager="To Do List App"
           propMinWidth="355px"
-          iDevelopedAnInventoryMana="I provide full stack web development services, focusing on fast, accessible, and visually appealing websites. My services include website design and development, UX/UI design, responsive web design, and SEO optimization."
+          iDevelopedAnInventoryMana="My to-do list app offers a sleek, minimalistic design that stands out while remaining highly functional. The smooth animation on the dark mode toggle adds a touch of sophistication, making it feel intuitive and enjoyable to use. With features like adding multiple tasks, marking them complete, and a one-click delete-all option, it streamlines task management without the clutter. Despite its simplicity, the site is loud and personable, creating a satisfying user experience that feels good every time you interact with it."
           propGap="20px"
           propWidth="74px"
           tagOrButton="HTML/CSS"
@@ -77,7 +77,7 @@ const ProjectSection: FunctionComponent<ProjectSectionType> = ({
           propMinWidth2="55px"
           tagOrButton2="UX/UI Design"
           tagOrButton3="Responsive Web Design"
-          projectLink="https://github.com/dimijimz/Dimitri-Portfolio-Website"
+          projectLink="https://dimijimz.github.io/todo-list-app/"
         />
       </div>
     </motion.section>
