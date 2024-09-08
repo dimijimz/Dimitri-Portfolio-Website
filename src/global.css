@@ -1,12 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-body {
-  @apply leading-[normal] m-0;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Show hamburger menu on mobile */
+@media (max-width: 600px) {
+  .desktop-menu {
+    display: none; /* Hide desktop menu */
+  }
+  .mobile-menu {
+    display: flex; /* Show mobile menu */
+  }
 }
+
+body {
+  line-height: normal; /* Correct syntax */
+  margin: 0;
+}
+
 *,
 ::before,
 ::after {
