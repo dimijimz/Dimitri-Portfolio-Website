@@ -12,7 +12,17 @@ const NavBarDesktop: FunctionComponent<NavBarDesktopType> = ({
     <div
       className={`flex-1 overflow-hidden flex flex-row items-center justify-between py-4 px-[19px] box-border max-w-full text-left text-lg text-gray-900 font-btn-text ${className}`}
     >
-      {/* Navigation Links */}
+      <div className="flex flex-col items-start justify-start">
+        <div className="flex flex-row items-center justify-start py-[3px]">
+          <h3 className="m-0 h-8 relative text-inherit leading-[32px] font-bold font-[inherit] inline-block whitespace-nowrap">
+            <span>{`<`}</span>
+            <span className="text-dimgray-100">Dimitri</span>
+            <span>{`>`}</span>
+            <span className="text-darkslategray-200">{` `}</span>
+            <span>{`</Full Stack Developer>`}</span>
+          </h3>
+        </div>
+      </div>
       <div className="flex flex-row items-center justify-between gap-12 max-w-full text-center text-sm text-dimgray-200">
         <ScrollLink
           to="projects"
@@ -41,14 +51,11 @@ const NavBarDesktop: FunctionComponent<NavBarDesktopType> = ({
         >
           Contact
         </ScrollLink>
-
         {/* Vector Line Divider */}
         <div className="flex items-center">
           <div className="h-6 w-px bg-gray-900" />
         </div>
       </div>
-
-      {/* Resume Download Button */}
       <div className="flex flex-row items-center justify-center text-light-text-color">
         <div className="rounded-17xl bg-gray-900 overflow-hidden flex flex-row items-center justify-center py-[10px] px-[20px] gap-[10px]">
           <a
