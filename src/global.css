@@ -5,15 +5,40 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Show hamburger menu on mobile */
-@media (max-width: 600px) {
+/* Show hamburger menu on mobile (already part of global.css) */
+@media (max-width: 800px) {
   .desktop-menu {
     display: none; /* Hide desktop menu */
   }
+  .mobile-menu-toggle {
+    display: block; /* Show the hamburger icon */
+    font-size: 2rem;
+    cursor: pointer;
+  }
   .mobile-menu {
-    display: flex; /* Show mobile menu */
+    display: none; /* Initially hidden */
+    background-color: #333;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+  }
+  .mobile-menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
   }
 }
+
+/* Default settings for non-mobile view */
+.mobile-menu-toggle {
+  display: none;
+}
+
+.mobile-menu a {
+  display: none;
+}
+
 
 body {
   line-height: normal; /* Correct syntax */
