@@ -23,13 +23,13 @@ const NavBarDesktop: FunctionComponent<NavBarDesktopType> = ({
           </h3>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-between gap-12 max-w-full text-center text-sm text-dimgray-200">
+      <div className="flex flex-row items-center justify-end gap-8 max-w-full text-center text-sm text-dimgray-200">
         <ScrollLink
           to="projects"
           smooth={true}
           duration={500}
           offset={-70}
-          className="cursor-pointer"
+          className="cursor-pointer transition-colors duration-300 hover:text-gray-900 hover:underline"
         >
           Projects
         </ScrollLink>
@@ -38,7 +38,7 @@ const NavBarDesktop: FunctionComponent<NavBarDesktopType> = ({
           smooth={true}
           duration={500}
           offset={-70}
-          className="cursor-pointer"
+          className="cursor-pointer transition-colors duration-300 hover:text-gray-900 hover:underline"
         >
           Info
         </ScrollLink>
@@ -47,7 +47,7 @@ const NavBarDesktop: FunctionComponent<NavBarDesktopType> = ({
           smooth={true}
           duration={500}
           offset={-70}
-          className="cursor-pointer"
+          className="cursor-pointer transition-colors duration-300 hover:text-gray-900 hover:underline"
         >
           Contact
         </ScrollLink>
@@ -55,24 +55,24 @@ const NavBarDesktop: FunctionComponent<NavBarDesktopType> = ({
         <div className="flex items-center">
           <div className="h-6 w-px bg-gray-900" />
         </div>
-      </div>
-      <div className="flex flex-row items-center justify-center text-light-text-color">
-        <div className="rounded-17xl bg-gray-900 overflow-hidden flex flex-row items-center justify-center py-[10px] px-[20px] gap-[10px]">
-          <a
-            href="https://drive.google.com/file/d/1if4TrLO2YOUQxaZ3PLtXCNWfT61EuFMQ/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="[text-decoration:none] relative tracking-[0.2px] leading-[24px] font-semibold text-[14px] text-white whitespace-nowrap"
-          >
-            Download Resume
-          </a>
-          <div className="flex flex-col items-center justify-center">
-            <img
-              className="w-2 h-2 relative overflow-hidden shrink-0"
-              loading="lazy"
-              alt=""
-              src="/icn-arrowright-icnxs.svg"
-            />
+        <div className="flex flex-row items-center justify-center text-light-text-color">
+          <div className="rounded-17xl bg-gray-900 overflow-hidden flex flex-row items-center justify-center py-[10px] px-[20px] gap-[10px] transition-colors duration-300 hover:bg-gray-800">
+            <a
+              href="https://drive.google.com/file/d/1if4TrLO2YOUQxaZ3PLtXCNWfT61EuFMQ/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="[text-decoration:none] relative tracking-[0.2px] leading-[24px] font-semibold text-[14px] text-white whitespace-nowrap"
+            >
+              Download Resume
+            </a>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                className="w-2 h-2 relative overflow-hidden shrink-0"
+                loading="lazy"
+                alt=""
+                src="/icn-arrowright-icnxs.svg"
+              />
+            </div>
           </div>
         </div>
       </div>

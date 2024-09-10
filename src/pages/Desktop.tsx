@@ -32,67 +32,71 @@ const Desktop: FunctionComponent = () => {
       </section>
 
       <div className="w-full bg-light-text-color flex flex-col items-center justify-center pt-12 px-5 pb-6 box-border">
-        <div className="max-w-[1078px] mx-auto flex flex-col items-center justify-center gap-[11px]">
-          <div className="w-full overflow-hidden flex flex-row items-center justify-between py-0 px-[411px] gap-5">
+        <div className="max-w-[1078px] w-full mx-auto flex flex-col items-center justify-center gap-[11px]">
+          {/* Button Container */}
+          <div className="w-full overflow-hidden flex flex-row items-center justify-center gap-5 flex-wrap">
             
             {/* LinkedIn Button */}
             <a
               href="https://www.linkedin.com/in/dimitri-jimenez/"
               target="_blank"
               rel="noopener noreferrer"
-              className="h-[47px] w-[47px] rounded-[24.08px] bg-gray-900 flex flex-col items-start justify-start pt-[10.7px] pb-[9.6px] pl-2.5 pr-[9px] box-border"
+              className="h-[40px] w-[40px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-[24.08px] bg-gray-900 flex flex-col items-start justify-start pt-[8px] pb-[8px] pl-2 pr-[8px] box-border transition-all duration-300 ease-in-out hover:bg-gray-800 hover:scale-110"
             >
               <div className="flex flex-row items-end justify-start gap-[2.7px]">
                 <img
-                  className="h-[26.7px] w-[6.8px] relative"
+                  className="h-[20px] w-[5px] relative"
                   loading="lazy"
                   alt="LinkedIn"
-                  src="/vector-4.svg"
+                  src="/vector.svg"
                 />
                 <img
-                  className="h-[17.9px] w-[17.6px] relative"
+                  className="h-[15px] w-[15px] relative"
                   loading="lazy"
                   alt=""
-                  src="/vector-5.svg"
+                  src="/vector-1.svg"
                 />
               </div>
             </a>
 
+            {/* Divider Line */}
             <div className="h-[25px] w-px relative border-dimitri border-r-[1px] border-solid box-border" />
-
+            
             {/* GitHub Button */}
             <a
               href="https://github.com/dimijimz"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-[14.44px] flex flex-row items-center justify-center pt-[6.3px] px-[3px] pb-[6.4px]"
+              className="overflow-hidden flex flex-col items-center justify-center w-[40px] h-[40px] transition-all duration-300 ease-in-out hover:scale-110"
             >
               <img
-                className="h-[43.3px] w-[43.3px] relative overflow-hidden shrink-0"
+                className="w-[40px] h-[40px] relative"
                 loading="lazy"
                 alt="GitHub"
-                src="/icon.svg"
+                src="/vector-2.svg"
               />
             </a>
 
+            {/* Divider Line */}
             <div className="h-[25px] w-px relative border-dimitri border-r-[1px] border-solid box-border" />
-
+            
             {/* Email Button */}
             <a
               href="mailto:dimijimz96@gmail.com?subject=Hello%2C%20there!"
-              className="h-[34px] w-[43px] relative overflow-hidden shrink-0"
+              className="shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] overflow-hidden flex flex-col items-start justify-start transition-all duration-300 ease-in-out hover:scale-110"
             >
               <img
-                className="h-[34px] w-[43px] relative overflow-hidden shrink-0"
+                className="w-[43px] h-[34px] relative"
                 loading="lazy"
                 alt="Email"
-                src="/frame.svg"
+                src="/vector-3.svg"
               />
             </a>
           </div>
 
           {/* Footer Text */}
-          <div className="self-stretch relative tracking-[-0.01em] font-light text-center font-open-sans">
+          <div className="self-stretch relative tracking-[-0.01em] font-light text-center font-open-sans 
+              text-sm sm:text-xs">
             Full design and development by Dimitri Jimenez
           </div>
         </div>

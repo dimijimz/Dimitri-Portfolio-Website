@@ -24,7 +24,7 @@ const Hero: FunctionComponent<HeroType> = ({ className = "" }) => {
             <h1 className="m-0 self-stretch relative text-inherit tracking-[0.01em] leading-[72px] font-bold font-[inherit] mq750:text-13xl mq750:leading-[58px] mq450:text-5xl mq450:leading-[43px]">
               <p className="m-0">Welcome!</p>
               <p className="m-0">
-                <span>{`I’m `}</span>
+                <span>{`I'm `}</span>
                 <span className="text-dimitri">Dimitri.</span>
               </p>
             </h1>
@@ -47,7 +47,7 @@ const Hero: FunctionComponent<HeroType> = ({ className = "" }) => {
                 href="https://www.linkedin.com/in/dimitri-jimenez/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-[40px] w-[40px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-[24.08px] bg-gray-900 flex flex-col items-start justify-start pt-[8px] pb-[8px] pl-2 pr-[8px] box-border"
+                className="h-[40px] w-[40px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] rounded-[24.08px] bg-gray-900 flex flex-col items-start justify-start pt-[8px] pb-[8px] pl-2 pr-[8px] box-border transition-all duration-300 ease-in-out hover:bg-gray-800 hover:scale-110"
               >
                 <div className="flex flex-row items-end justify-start gap-[2.7px]">
                   <img
@@ -73,7 +73,7 @@ const Hero: FunctionComponent<HeroType> = ({ className = "" }) => {
                 href="https://github.com/dimijimz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="overflow-hidden flex flex-col items-center justify-center w-[40px] h-[40px]"
+                className="overflow-hidden flex flex-col items-center justify-center w-[40px] h-[40px] transition-all duration-300 ease-in-out hover:scale-110"
               >
                 <img
                   className="w-[40px] h-[40px] relative"
@@ -89,7 +89,7 @@ const Hero: FunctionComponent<HeroType> = ({ className = "" }) => {
               {/* Email Button */}
               <a
                 href="mailto:dimijimz96@gmail.com?subject=Hello%2C%20there!"
-                className="shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] overflow-hidden flex flex-col items-start justify-start"
+                className="shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] overflow-hidden flex flex-col items-start justify-start transition-all duration-300 ease-in-out hover:scale-110"
               >
                 <img
                   className="w-[43px] h-[34px] relative"

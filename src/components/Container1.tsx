@@ -10,7 +10,7 @@ export type Container1Type = {
   tagOrButton2?: string;
   tagOrButton3?: string;
   tagOrButton4?: string;
-  projectLink?: string; // New prop for project link
+  projectLink?: string;
 
   /** Style props */
   propMinWidth?: CSSProperties["minWidth"];
@@ -34,7 +34,7 @@ const Container1: FunctionComponent<Container1Type> = ({
   tagOrButton1,
   propDisplay,
   propMinWidth2,
-  projectLink, // Add the project link prop
+  projectLink,
 }) => {
   const inventoryManagerStyle: CSSProperties = useMemo(() => {
     return {
@@ -97,11 +97,11 @@ const Container1: FunctionComponent<Container1Type> = ({
         </div>
       </div>
       <div className="w-[780px] flex flex-row items-center justify-center py-0 px-5 box-border max-w-full text-xs text-darkslategray-100 font-open-sans">
-        <div
-          className="flex-1 flex flex-row items-center justify-between py-2.5 px-[41px] box-border max-w-full gap-[7.8px] mq1100:flex-wrap"
-          style={containerStyle}
+  <div
+    className="flex-1 flex flex-row items-center justify-between py-2.5 px-[41px] box-border max-w-full gap-[7.8px] mq1100:flex-wrap"
+    style={containerStyle}
         >
-          {/* "View Project" button linking to the project */}
+          {/* "View Project" button - remains interactive */}
           <a
             href={projectLink}
             target="_blank"
@@ -117,41 +117,21 @@ const Container1: FunctionComponent<Container1Type> = ({
             <div className="h-6 w-px relative border-gray-900 border-r-[1px] border-solid box-border" />
           </div>
 
-          {/* The following divs are for tags and should not be clickable */}
-          <div
-            className="rounded-81xl border-darkslategray-100 border-[1px] border-solid flex flex-row items-center justify-center py-1.5 px-[7px] whitespace-nowrap"
-            style={tagStyle}
-          >
-            <div
-              className="relative inline-block min-w-[103px]"
-              style={tagOrButtonStyle}
-            >
-              {tagOrButton}
-            </div>
-          </div>
-          <div
-            className="rounded-81xl border-darkslategray-100 border-[1px] border-solid flex flex-row items-center justify-center py-1.5 px-[7px] whitespace-nowrap"
-            style={tagStyle}
-          >
-            <div
-              className="relative"
-              style={tagOrButton1Style}
-            >
-              {tagOrButton1}
-            </div>
-          </div>
-          <div className="rounded-81xl border-darkslategray-100 border-[1px] border-solid flex flex-row items-center justify-center py-1.5 px-[7px] whitespace-nowrap">
-            <div className="relative text-xs font-open-sans text-darkslategray-100 text-left inline-block min-w-[121px]">
-              User Interface Design
-            </div>
-          </div>
-          <div className="rounded-81xl border-darkslategray-100 border-[1px] border-solid flex flex-row items-center justify-center py-1.5 px-[7px] whitespace-nowrap">
-            <div className="relative text-xs font-open-sans text-darkslategray-100 text-left inline-block min-w-[94px]">
-              Software Testing
-            </div>
-          </div>
-        </div>
-      </div>
+          {/* Tags - now non-interactive */}
+          <div className="bg-gray-100 text-gray-700 rounded-full px-3 py-1 text-sm font-light mr-2 mb-2">
+      {tagOrButton}
+    </div>
+    <div className="bg-gray-100 text-gray-700 rounded-full px-3 py-1 text-sm font-light mr-2 mb-2">
+      {tagOrButton1}
+    </div>
+    <div className="bg-gray-100 text-gray-700 rounded-full px-3 py-1 text-sm font-light mr-2 mb-2">
+      User Interface Design
+    </div>
+    <div className="bg-gray-100 text-gray-700 rounded-full px-3 py-1 text-sm font-light mr-2 mb-2">
+      Software Testing
+    </div>
+  </div>
+</div>
     </div>
   );
 };

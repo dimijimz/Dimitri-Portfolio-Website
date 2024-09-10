@@ -37,7 +37,7 @@ const ContactSection: FunctionComponent<ContactSectionType> = ({
         "service_rh2rf2q", // Your EmailJS service ID
         "template_7brp5k6", // Your EmailJS template ID
         formData,
-        "shBHvynocvTiMeHiK" // Replace with your actual user ID or public key
+        "shBHvynocvTiMeHiK" // EmailJS user ID
       )
       .then(
         (response) => {
@@ -127,13 +127,13 @@ const ContactSection: FunctionComponent<ContactSectionType> = ({
             </div>
           </div>
           <div className="flex flex-row items-start justify-start py-0 px-[292px] box-border max-w-full mq750:pl-[146px] mq750:pr-[146px] mq750:box-border mq450:pl-5 mq450:pr-5 mq450:box-border">
-            <button className="cursor-pointer [border:none] pt-[13.5px] pb-[12.5px] pl-[58px] pr-[53px] bg-[transparent] flex flex-row items-start justify-start relative">
-              <div className="h-full w-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] rounded-63xl bg-light-text-color" />
-              <div className="relative text-mini tracking-[-0.01em] font-btn-text text-black text-left inline-block min-w-[55px] z-[1]">
-                Submit
-              </div>
-            </button>
-          </div>
+  <button className="cursor-pointer [border:none] pt-[13.5px] pb-[12.5px] pl-[58px] pr-[53px] bg-[transparent] flex flex-row items-start justify-start relative transition-all duration-300 ease-in-out hover:bg-gray-100 hover:scale-105">
+    <div className="h-full w-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] rounded-63xl bg-light-text-color" />
+    <div className="relative text-mini tracking-[-0.01em] font-btn-text text-black text-left inline-block min-w-[55px] z-[1]">
+      Submit
+    </div>
+  </button>
+</div>
           {statusMessage && (
             <div className="text-center text-sm text-green-500 mt-4">
               {statusMessage}

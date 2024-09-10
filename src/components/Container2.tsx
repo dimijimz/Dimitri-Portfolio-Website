@@ -9,7 +9,7 @@ export type Container2Type = {
   tagOrButton1?: string;
   tagOrButton2?: string;
   tagOrButton3?: string;
-  projectLink?: string; // New prop for project link
+  projectLink?: string;
 
   /** Style props */
   propMinWidth?: CSSProperties["minWidth"];
@@ -35,7 +35,7 @@ const Container2: FunctionComponent<Container2Type> = ({
   propWidth,
   tagOrButton3,
   propMinWidth3,
-  projectLink, // Receiving the project link
+  projectLink,
 }) => {
   const betMasterStyle: CSSProperties = useMemo(() => {
     return {
@@ -97,6 +97,7 @@ const Container2: FunctionComponent<Container2Type> = ({
       </div>
       <div className="w-[780px] flex flex-row items-center justify-center py-0 px-5 box-border max-w-full text-xs text-darkslategray-100 font-open-sans">
         <div className="flex-1 flex flex-row items-center justify-between py-2.5 px-[41px] box-border max-w-full gap-[9.4px] mq1100:flex-wrap">
+          {/* "View Project" button - remains interactive */}
           <a
             href={projectLink}
             target="_blank"
@@ -110,42 +111,22 @@ const Container2: FunctionComponent<Container2Type> = ({
           <div className="w-5 flex flex-row items-center justify-start py-2.5 pl-2.5 pr-2 box-border">
             <div className="h-6 w-px relative border-gray-900 border-r-[1px] border-solid box-border" />
           </div>
-          <div className="rounded-81xl border-darkslategray-100 border-[1px] border-solid flex flex-row items-center justify-center py-1.5 px-[7px] whitespace-nowrap">
-            <div
-              className="relative inline-block min-w-[120px]"
-              style={tagOrButton2Style}
-            >
-              {tagOrButton}
-            </div>
+          {/* Tags - now non-interactive */}
+          <div className="bg-gray-100 text-gray-700 rounded-full px-3 py-1 text-sm font-light mr-2 mb-2">
+            {tagOrButton}
           </div>
-          <div className="rounded-81xl border-darkslategray-100 border-[1px] border-solid flex flex-row items-center justify-center py-1.5 px-[7px] whitespace-nowrap">
-            <div
-              className="relative inline-block min-w-[112px]"
-              style={tagOrButton3Style}
-            >
-              {tagOrButton1}
-            </div>
+          <div className="bg-gray-100 text-gray-700 rounded-full px-3 py-1 text-sm font-light mr-2 mb-2">
+            {tagOrButton1}
           </div>
-          <div className="rounded-81xl border-darkslategray-100 border-[1px] border-solid flex flex-row items-center justify-center py-1.5 px-[7px] whitespace-nowrap">
-            <div className="relative inline-block min-w-[97px]">
-              {tagOrButton2}
-            </div>
+          <div className="bg-gray-100 text-gray-700 rounded-full px-3 py-1 text-sm font-light mr-2 mb-2">
+            {tagOrButton2}
           </div>
-          <div
-            className="rounded-81xl border-darkslategray-100 border-[1px] border-solid flex flex-row items-center justify-center py-1.5 px-[7px] whitespace-nowrap"
-            style={tag2Style}
-          >
-            <div
-              className="relative inline-block min-w-[113px]"
-              style={tagOrButton4Style}
-            >
-              {tagOrButton3}
-            </div>
+          <div className="bg-gray-100 text-gray-700 rounded-full px-3 py-1 text-sm font-light mr-2 mb-2">
+            {tagOrButton3}
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Container2;
