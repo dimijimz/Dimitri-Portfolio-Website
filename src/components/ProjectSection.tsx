@@ -16,7 +16,7 @@ const ProjectSection: FunctionComponent<ProjectSectionType> = ({
       initial={{ opacity: 0, y: 50 }} // Initial state before the animation starts
       whileInView={{ opacity: 1, y: 0 }} // Only animate when in view
       transition={{ duration: 1, ease: "easeOut" }} // Animation duration and easing
-      viewport={{ once: true, amount: 0.3 }} // Only animate once when 30% of the section is in view
+      viewport={{ once: true, amount: 0.1 }} // Only animate once when 10% of the section is in view
     >
       <div className="w-full max-w-[848px] mx-auto flex flex-col items-center justify-start gap-[50px]">
         {/* Adjusted Padding for Projects Heading */}
